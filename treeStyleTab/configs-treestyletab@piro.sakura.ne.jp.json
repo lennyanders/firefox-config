@@ -17,11 +17,13 @@
   "defaultBookmarkParentId": "menu________",
   "enableWindowsBehaviors": true,
   "faviconizePinnedTabs": false,
+  "insertNewChildAt": -1,
+  "insertNewTabFromPinnedTabAt": -1,
   "lastDraggedTabs": {
     "tabIds": [
-      75
+      13
     ],
-    "urlsDigest": "9800a5f73e393a7392f4ee055a8490400737eb1c"
+    "urlsDigest": "775758a0c1889a6e0840b0232b262adadcc1f0f0"
   },
   "lastSelectedSubPanelProviderId": "tst-bookmarks-subpanel@piro.sakura.ne.jp",
   "lastSubPanelHeight": 466,
@@ -35,8 +37,8 @@
   ],
   "notifiedFeaturesVersion": 8,
   "optionsExpandedSections": [
-    "section-advanced",
-    "section-debug"
+    "section-debug",
+    "section-newTab"
   ],
   "showExpertOptions": true,
   "showNewTabActionSelector": false,
