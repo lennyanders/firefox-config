@@ -1,0 +1,217 @@
+:root {
+  /* variables for Tree Style Tab */
+  --tab-size: 2.25rem;
+  --favicon-size: 1rem;
+
+  /* own variables */
+  --bg-color: hsl(249, 11%, 12%);
+  --bg-color-hover: hsl(247, 10%, 15%);
+  --bg-color-active: hsl(247, 10%, 18%);
+  --bg-color-counter: hsl(247, 10%, 21%);
+
+  --font-color: hsl(0, 0%, 80%);
+  --font-color-hover: hsl(0, 0%, 90%);
+  --font-color-active: hsl(0, 0%, 100%);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --animation-duration: 0.2s;
+
+  font-size: medium;
+  color: var(--font-color);
+}
+
+/* reset */
+button {
+  color: currentColor !important;
+}
+
+/* tab container */
+#tabbar-container {
+  background-color: var(--bg-color);
+}
+
+#all-tabs {
+  padding: 0.25rem 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+:root:not(:hover) #all-tabs {
+  transform: translateX(0.25rem);
+}
+
+/* tab */
+tab-item {
+  height: var(--tab-size);
+  padding-right: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+tab-item + tab-item {
+  margin-top: 0.25rem;
+}
+
+tab-item.active {
+  background-color: var(--bg-color-active);
+  color: var(--font-color-active);
+}
+
+tab-item:not(.active):hover {
+  background-color: var(--bg-color-hover);
+  color: var(--font-color-hover);
+}
+
+tab-item .highlighter,
+tab-item .background {
+  display: none;
+}
+
+/* tab expand arrow */
+tab-item[data-child-ids] tab-twisty {
+  margin-left: 0.25rem;
+}
+
+tab-twisty::before {
+  background-color: currentColor !important;
+}
+
+tab-item:not([data-child-ids]) tab-twisty {
+  display: none;
+}
+
+/* tab counter */
+tab-counter {
+  flex: 0 0 1rem;
+  text-align: center;
+  line-height: 1rem;
+  background-color: var(--bg-color-counter);
+  border-radius: 50%;
+  order: -1;
+}
+
+tab-counter.counter::before,
+tab-counter.counter::after {
+  content: '';
+}
+
+/* tab title */
+tab-label {
+  margin-top: -0.125rem;
+  margin-left: 0.75rem;
+  line-height: 1.5;
+}
+
+tab-item[data-child-ids] tab-label {
+  margin-left: 0.25rem;
+}
+
+/* tab audio button */
+tab-sound-button {
+  margin-left: 0.5rem;
+  color: var(--font-color);
+  transform: translateX(1.5rem);
+  transition: transform calc(var(--animation-duration) * 2) var(--ease-out),
+    color var(--animation-duration) var(--ease-out);
+}
+
+:root:not(:hover) tab-sound-button {
+  transform: translate(3.5rem, 0.5rem) scale(0.75);
+}
+
+tab-sound-button::after {
+  background-color: currentColor !important;
+}
+
+tab-sound-button:hover {
+  color: var(--font-color-active);
+}
+
+tab-item:hover tab-sound-button {
+  transform: translateX(0);
+}
+
+/* tab favicon */
+tab-favicon {
+  margin-left: 0.5rem;
+  transform: translateX(1.5rem);
+  transition: transform calc(var(--animation-duration) * 1.5) var(--ease-out);
+  order: 10;
+}
+
+tab-favicon .favicon-default::before {
+  background-color: var(--font-color) !important;
+}
+
+tab-item[data-current-favicon-uri='undefined'] tab-favicon .favicon-default::before,
+tab-item[data-current-favicon-uri='null'] tab-favicon .favicon-default::before {
+  background: url('chrome://branding/content/identity-icons-brand.svg') no-repeat center !important;
+  mask: none !important;
+  filter: invert(0.8);
+}
+
+tab-item:hover tab-favicon {
+  transform: translateX(0);
+}
+
+/* tab close button */
+tab-closebox {
+  margin-left: 0.5rem;
+  color: var(--font-color);
+  transform: translateX(1.5rem);
+  transition: transform var(--animation-duration) var(--ease-out),
+    color var(--animation-duration) var(--ease-out);
+}
+
+tab-closebox::after {
+  background-color: currentColor !important;
+}
+
+tab-closebox:hover {
+  color: var(--font-color-active);
+}
+
+tab-item:hover tab-closebox {
+  transform: translateX(0);
+}
+
+/* newtab button */
+.newtab-button-box {
+  width: 3.5rem;
+  height: 2rem;
+  margin: auto;
+  border-radius: 0.25rem;
+  transition: background-color var(--animation-duration) var(--ease-out),
+    color var(--animation-duration) var(--ease-out);
+}
+
+.newtab-button-box:hover {
+  background-color: hsl(247, 10%, 15%);
+}
+
+.newtab-button {
+  border: none;
+  padding: 0;
+  height: 100%;
+}
+
+.newtab-button::before {
+  background-color: currentColor !important;
+}
+
+.newtab-button:hover {
+  color: var(--font-color-active);
+}
+
+.newtab-action-selector-anchor {
+  padding: 0 !important;
+  border: none;
+  height: max-content;
+  transition: color var(--animation-duration) var(--ease-out);
+}
+
+.newtab-action-selector-anchor::before {
+  background-color: currentColor !important;
+}
+
+.newtab-action-selector-anchor:hover {
+  color: var(--font-color-active);
+}

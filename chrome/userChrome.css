@@ -1,0 +1,89 @@
+#main-window {
+  --vertical-cut-off: 0px;
+}
+
+/* I don't know if this is a windows only thing, but firefox gets cut off by 8px (top & bottom) when maximized */
+/* seems to be caused by: #titlebar { appearance: none !important; }  */
+#main-window[sizemode='maximized'] {
+  --vertical-cut-off: 8px;
+}
+
+/* ------------------------------------- */
+/* Put window buttons in nav/address bar */
+/* ------------------------------------- */
+#main-window {
+  padding-top: var(--vertical-cut-off) !important;
+}
+
+#navigator-toolbox {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* remove weird fullscreen (f11) transition */
+#navigator-toolbox[fullscreenShouldAnimate] {
+  transition: margin-top 0s !important;
+}
+
+#nav-bar {
+  padding-right: 138px;
+}
+
+#titlebar {
+  appearance: none !important;
+}
+
+#TabsToolbar .private-browsing-indicator {
+  display: none;
+}
+
+#TabsToolbar .titlebar-buttonbox-container {
+  display: block;
+  position: fixed;
+  right: 0;
+  top: var(--vertical-cut-off);
+  z-index: 1;
+}
+
+#TabsToolbar .toolbar-items {
+  display: none;
+}
+
+#urlbar-container {
+  -moz-window-dragging: drag;
+}
+
+#urlbar-container > * {
+  -moz-window-dragging: no-drag;
+}
+
+#browser {
+  padding-bottom: var(--vertical-cut-off) !important;
+}
+
+/* ------- */
+/* Sidebar */
+/* ------- */
+#sidebar-box {
+  position: relative;
+  max-width: 320px;
+  min-width: 320px;
+  height: 100%;
+  margin-left: -280px;
+  z-index: 1;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgb(28, 27, 34) !important;
+  transition: transform 0.2s ease;
+}
+
+#sidebar-box:hover {
+  transform: translateX(280px);
+}
+
+#sidebar-splitter,
+#sidebar-header {
+  display: none;
+}
+
+/* --------- */
+/* Bookmarks */
+/* --------- */
