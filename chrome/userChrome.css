@@ -1,10 +1,10 @@
-#main-window {
+:root {
   --vertical-cut-off: 0px;
 }
 
 /* I don't know if this is a windows only thing, but firefox gets cut off by 8px (top & bottom) when maximized */
 /* seems to be caused by: #titlebar { appearance: none !important; }  */
-#main-window[sizemode='maximized'] {
+:root[sizemode='maximized'] {
   --vertical-cut-off: 8px;
 }
 
@@ -77,7 +77,8 @@
   transition: transform 0.2s ease;
 }
 
-#sidebar-box:hover {
+#sidebar-box:hover,
+#sidebar-box:not([sidebarcommand='treestyletab_piro_sakura_ne_jp-sidebar-action']) {
   transform: translateX(280px);
 }
 
@@ -89,3 +90,12 @@
 /* --------- */
 /* Bookmarks */
 /* --------- */
+#BMB_bookmarksShowAllTop,
+#BMB_bookmarksShowAllTop + menuseparator,
+#BMB_viewBookmarksSidebar,
+#BMB_bookmarksToolbar,
+#BMB_unsortedBookmarks,
+#BMB_bookmarksShowAll,
+#BMB_mobileBookmarks + menuseparator {
+  display: none;
+}
