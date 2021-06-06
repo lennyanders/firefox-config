@@ -8,6 +8,8 @@
   --vertical-cut-off: 8px;
 }
 
+@namespace url('http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul');
+
 /* ------------------------------------- */
 /* Put window buttons in nav/address bar */
 /* ------------------------------------- */
