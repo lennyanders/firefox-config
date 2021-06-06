@@ -31,12 +31,8 @@ button {
 }
 
 #all-tabs {
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem;
   transition: transform 0.2s ease;
-}
-
-:root:not(:hover) #all-tabs {
-  transform: translateX(0.25rem);
 }
 
 /* tab */
@@ -106,15 +102,13 @@ tab-item[data-child-ids] tab-label {
 
 /* tab audio button */
 tab-sound-button {
-  margin-left: 0.5rem;
   color: var(--font-color);
-  transform: translateX(1.5rem);
-  transition: transform calc(var(--animation-duration) * 2) var(--ease-out),
+  margin-left: 1rem;
+  margin-right: -2rem;
+  margin-top: 0.75rem;
+  transform: translateX(1.5rem) scale(0.75);
+  transition: transform calc(var(--animation-duration) * 1.5) var(--ease-out),
     color var(--animation-duration) var(--ease-out);
-}
-
-:root:not(:hover) tab-sound-button {
-  transform: translate(3.5rem, 0.5rem) scale(0.75);
 }
 
 tab-sound-button::after {
@@ -126,7 +120,7 @@ tab-sound-button:hover {
 }
 
 tab-item:hover tab-sound-button {
-  transform: translateX(0);
+  transform: translateX(0) scale(0.75);
 }
 
 /* tab favicon */
