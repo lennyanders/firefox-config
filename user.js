@@ -151,9 +151,6 @@ user_pref('browser.region.network.url', '');
 // disable search engine updates
 user_pref('browser.search.update', false);
 
-// disable WebRTC (Web Real-Time Communication)
-user_pref('media.peerconnection.enabled', false);
-
 // limit WebRTC IP leaks if using WebRTC
 user_pref('media.peerconnection.ice.default_address_only', true);
 user_pref('media.peerconnection.ice.no_host', true);
