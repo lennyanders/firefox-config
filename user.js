@@ -156,9 +156,6 @@ user_pref('media.peerconnection.ice.default_address_only', true);
 user_pref('media.peerconnection.ice.no_host', true);
 user_pref('media.peerconnection.ice.proxy_only_if_behind_proxy', true);
 
-// enable First Party Isolation (May break cross-domain logins and site functionality until perfected)
-user_pref('privacy.firstparty.isolate', true);
-
 // enable Enhanced Tracking Protection (ETP) in all windows
 user_pref('privacy.trackingprotection.enabled', true);
 
