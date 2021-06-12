@@ -172,6 +172,7 @@ tab-item:hover tab-closebox {
   width: 3.5rem;
   height: 2rem;
   margin: auto;
+  justify-content: center;
   border-radius: 0.25rem;
   transition: background-color var(--animation-duration) var(--ease-out),
     color var(--animation-duration) var(--ease-out);
@@ -181,31 +182,10 @@ tab-item:hover tab-closebox {
   background-color: hsl(247, 10%, 15%);
 }
 
-.newtab-button {
-  border: none;
-  padding: 0;
-  height: 100%;
-}
-
 .newtab-button::before {
   background-color: currentColor !important;
 }
 
 .newtab-button:hover {
-  color: var(--font-color-active);
-}
-
-.newtab-action-selector-anchor {
-  padding: 0 !important;
-  border: none;
-  height: max-content;
-  transition: color var(--animation-duration) var(--ease-out);
-}
-
-.newtab-action-selector-anchor::before {
-  background-color: currentColor !important;
-}
-
-.newtab-action-selector-anchor:hover {
   color: var(--font-color-active);
 }
