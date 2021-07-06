@@ -40,6 +40,7 @@ tab-item {
   height: var(--tab-size);
   padding-right: 0.5rem;
   border-radius: 0.25rem;
+  justify-content: center;
 }
 
 tab-item + tab-item {
@@ -182,8 +183,12 @@ tab-item:hover tab-closebox {
   background-color: hsl(247, 10%, 15%);
 }
 
-.newtab-button::before {
+.newtab-button::after {
   background-color: currentColor !important;
+}
+
+.newtab-button {
+  color: var(--font-color);
 }
 
 .newtab-button:hover {
