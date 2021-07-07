@@ -37,10 +37,7 @@ button {
 
 /* tab */
 tab-item {
-  height: var(--tab-size);
-  padding-right: 0.5rem;
   border-radius: 0.25rem;
-  justify-content: center;
 }
 
 tab-item + tab-item {
@@ -55,6 +52,11 @@ tab-item.active {
 tab-item:not(.active):hover {
   background-color: var(--bg-color-hover);
   color: var(--font-color-hover);
+}
+
+tab-item-substance {
+  height: var(--tab-size);
+  padding-right: 0.5rem;
 }
 
 tab-item .highlighter,
