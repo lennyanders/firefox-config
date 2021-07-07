@@ -36,27 +36,24 @@ button {
 }
 
 /* tab */
-tab-item {
-  border-radius: 0.25rem;
-}
-
 tab-item + tab-item {
   margin-top: 0.25rem;
-}
-
-tab-item.active {
-  background-color: var(--bg-color-active);
-  color: var(--font-color-active);
-}
-
-tab-item:not(.active):hover {
-  background-color: var(--bg-color-hover);
-  color: var(--font-color-hover);
 }
 
 tab-item-substance {
   height: var(--tab-size);
   padding-right: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+tab-item.active tab-item-substance {
+  background-color: var(--bg-color-active);
+  color: var(--font-color-active);
+}
+
+tab-item:not(.active):hover tab-item-substance {
+  background-color: var(--bg-color-hover);
+  color: var(--font-color-hover);
 }
 
 tab-item .highlighter,
