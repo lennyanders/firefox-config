@@ -1,0 +1,7 @@
+*
+!chrome
+!treeStyleTab
+!.prettierrc
+!README.md
+!user.js
+!.gitignore
