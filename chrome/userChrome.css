@@ -8,6 +8,12 @@
   --vertical-cut-off: 8px;
 }
 
+@media (-moz-mac-big-sur-theme: 1) {
+  :root[sizemode='maximized'] {
+    --vertical-cut-off: 1.5px;
+  }
+}
+
 @namespace url('http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul');
 
 /* ------------------------------------- */
@@ -34,7 +40,7 @@
   appearance: none !important;
 }
 
-#TabsToolbar .private-browsing-indicator {
+#TabsToolbar :is(.titlebar-spacer, .private-browsing-indicator) {
   display: none;
 }
 
@@ -60,6 +66,26 @@
 
 #browser {
   padding-bottom: var(--vertical-cut-off) !important;
+}
+
+@media (-moz-mac-big-sur-theme: 1) {
+  #TabsToolbar {
+    min-height: 0 !important;
+    pointer-events: none;
+  }
+
+  #nav-bar {
+    padding-left: 66px;
+    padding-right: 0;
+  }
+
+  #TabsToolbar .titlebar-buttonbox-container {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 13.5px;
+    z-index: 1;
+  }
 }
 
 /* ------- */
