@@ -9,6 +9,7 @@
 }
 
 @media (-moz-mac-big-sur-theme: 1) {
+  :root,
   :root[sizemode='maximized'] {
     --vertical-cut-off: 1.5px;
   }
@@ -77,6 +78,10 @@
   #nav-bar {
     padding-left: 66px;
     padding-right: 0;
+  }
+
+  html[inFullscreen='true'] #navigator-toolbox-background {
+    display: none;
   }
 
   #TabsToolbar .titlebar-buttonbox-container {
